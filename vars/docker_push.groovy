@@ -1,4 +1,4 @@
-def call(String Creds,tag,version){
+def call(String creds,tag,version){
   echo "this is test stage"
   withCredentials([usernamePassword("credentialsId":"${creds}",passwordVariable:"dockerPassword",usernameVariable:"dockerUsername")]){
     sh "docker login -u ${dockerUsername} -p ${dockerPassword}"
